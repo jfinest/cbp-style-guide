@@ -310,17 +310,8 @@ Example of Selectize, Select2, and plain Select.
         <label for="selectize2">Floating Label</label>
       </div>
       <div class="selectize-field">
-        <select id="selectize2" class="selectize-multiple" aria-expanded="false" multiple>
-          <option value="A">Option A</option>
-          <option value="B">Option B</option>
-          <option value="C">Option C</option>
-          <option value="D">Option D</option>
-          <option value="E">Option E</option>
-          <option value="F">Option F</option>
-          <option value="G">Option G</option>
-          <option value="H">Option H</option>
-          <option value="I">Option I</option>
-        </select>
+        <input>
+        <div class="holds-tags"></div>
         <label for="selectize2">Placeholder Label</label>
       </div>
       

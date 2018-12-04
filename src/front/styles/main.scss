@@ -1,0 +1,257 @@
+@import "pattern-library-hjs-github.scss";
+@import "pattern-library.scss";
+/*@import "../../../node_modules/cbp-theme/dist/scss/vendor/_material_cards.scss";*/
+
+
+.mdl-card__actions-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+  .btn {
+    background-color: transparent;
+    border: 2px solid $gray-medium;
+    border-radius: 3px;
+    color: $gray;
+
+    + .btn {
+      margin-left: 5px;
+    }
+    &:focus,
+    &:hover,
+    &:active {
+      border: 2px solid $brand-info;
+      background-color: $brand-info;
+      color: $white;
+    }
+  }
+}
+
+.mdl-card__actions-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: inherit;
+
+  .btn {
+    border: none;
+    color: $gray;
+    font-size: inherit;
+    background-color: transparent;
+
+    + .btn {
+      margin-left: 5px;
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $brand-info;
+      background-color: transparent;
+      .text-muted {
+        color: $brand-info;
+      }
+    }
+  }
+  a {
+    color: $gray;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $brand-info;
+      text-decoration: none;
+      border: none;
+      .text-muted {
+        color: $brand-info;
+      }
+    }
+  }
+}
+
+.mdl-card--expand {
+  flex-grow: 1;
+}
+
+
+.mdl-card__menu {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* CBP Extensions */
+
+.mdl-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  >div[class*='col-'] {
+    margin-bottom: 25px;
+  }
+}
+
+.mdl-card-single-expansion {
+  display: flex;
+  flex-wrap: wrap;
+
+  >div[class*='col-'] {
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .mdl-card {
+    @extend .mdl-card;
+    background-color:  $gray-lightest;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 3px solid $gray-lightest;
+    height: 200px;
+
+    &.mdl-card-border {
+      border: 3px solid $gray-lighter;
+    }
+
+    &:focus,
+    &:hover,
+    &:focus-within,
+    &:active {
+      box-shadow: 0 0 4px 1px lighten(#000, 25%);
+      border: 3px solid $brand-info;
+      .mdl-card--border {
+        border-top: 3px solid $brand-info;
+      }
+    }
+  }
+  .less {
+    .mdl-card__supporting-text {
+		height: 50px;
+		overflow: hidden;		      
+    }
+  }
+  .show-more {
+  	height: auto;
+  	.mdl-card__supporting-text {
+  		height: auto;
+  	}
+  	.mdl-card__actions {
+  		position: static;
+  	}
+  }
+  .mdl-card__actions {
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  /*.mdl-card__supporting-text {
+    &.with-footer {
+      padding-bottom: 56px;
+    }
+  }*/
+  .main-body {
+  	display: flex;
+  	flex-direction: column;
+  }
+  .toggle-link {
+  	text-align: center;
+  	margin-top: 9px;
+  	margin-bottom: 9px;
+  	&:focus,
+  	&:hover,
+  	&:active {
+  		text-decoration: underline;
+  		color: $brand-info;
+  	}
+  }
+}
+
+.mdl-card-deck {
+  display: flex;
+  flex-wrap: wrap;
+
+  >div[class*='col-'] {
+    margin-bottom: 25px;
+  }
+
+  .mdl-card__actions {
+    height: 56px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .mdl-card__supporting-text {
+    /*&.with-footer {
+      padding-bottom: 56px;
+    }*/
+  }
+}
+
+/*.more {
+	.mdl-card__supporting-text {
+	  	height: 50px;
+	  	overflow: hidden;
+	}
+}*/
+
+.mdl-card {
+  @extend .mdl-card;
+  /*background-color: $white;*/
+  background-color:  $gray-lightest;
+  box-shadow: none;
+  border-radius: 5px;
+  border: 3px solid $gray-lightest;
+
+
+ /* &.mdl-card-shadow {
+    @include shadow-4dp();
+  }*/
+
+  &.mdl-card-border {
+    border: 3px solid $gray-lighter;
+  }
+
+  &.mdl-card-expand {
+    &:focus,
+    &:hover,
+    &:active {
+      box-shadow: 0 0 4px 1px lighten(#000, 25%);
+      border: 3px solid $brand-info;
+      &.mdl-card-border {
+        border: 3px solid $brand-info;
+      }
+    }
+  }
+  &:focus,
+  &:hover,
+  &:focus-within,
+  &:active {
+    box-shadow: 0 0 4px 1px lighten(#000, 25%);
+    border: 3px solid $brand-info;
+    .mdl-card--border {
+      border-top: 3px solid $brand-info;
+    }
+  }
+}
+
+.mdl-card__actions {
+  @extend .mdl-card__actions;
+  &:focus,
+  &:hover,
+  &:focus-within,
+  &:active {
+    background-color: $white;
+    /*.mdl-card--border {
+      border-top: 3px solid $brand-info;
+    }*/
+  }
+}
