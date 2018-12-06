@@ -417,7 +417,7 @@ TODO
           <h3 class="mdl-card__title-text">Longer heading text for the card.... Longer heading text for the card</h3>
         </div>
         <div class="mdl-card__supporting-text with-footer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /></p>
+          <p class="text-ellipsis-4line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /></p>
           <ul class="list-inline">
             <li><span class="text-bold">Sample</span></li>
             <li>Sample</li>
@@ -503,6 +503,11 @@ TODO
       </div>
       <div class="mdl-card__supporting-text with-footer">
         <p class="text-ellipsis-4line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <ul class="list-inline">
+          <li><span class="text-bold">Sample</span></li>
+          <li>Sample</li>
+          <li>Sample</li>
+        </ul>
       </div>
       <div class="mdl-card__actions mdl-card--border">
         <button type="button" class="btn btn-icon-only btn-xs btn-hover">
@@ -525,7 +530,7 @@ TODO
         <h3 class="mdl-card__title-text">Longer heading text for the card.... Longer heading text for the card</h3>
       </div>
       <div class="mdl-card__supporting-text with-footer">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /></p>
+        <p class="text-ellipsis-4line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /></p>
         <ul class="list-inline">
           <li><span class="text-bold">Sample</span></li>
           <li>Sample</li>
@@ -665,121 +670,153 @@ TODO
 <div class="pl-preview">
   <div class="row mdl-card-single-expansion ">
     <div class="col-xs-12 col-sm-6 col-md-3 ">
-      <div class="mdl-card less" tabindex="0">
-        <div class="mdl-card__title">
-          <h3 class="mdl-card__title-text">Heading for the card</h3>
-        </div>
-        <div class="main-body">
-          <div class="mdl-card__supporting-text with-footer">
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="mdl-card" tabindex="0">
+        <div>
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Heading for the card</h3>
           </div>
-          <div class="toggle-link">show more</div>
+          <div class="mdl-card__supporting-text with-footer">
+            <p class="text-ellipsis-3line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>        
+        <div class="expand-card bold" role="button" tabindex="0">
+          <i class="fa fa-chevron-down fa-fw"></i>
+          &nbsp;More
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-star"></i>
-          <span class="sr-only">Favorite</span>
-          </button>
-          <button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-pencil-square-o"></i>
-          <span class="sr-only">Edit</span>
-          </button>
-          <button class="p-more btn">
-          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-primary btn-xs pull-right">
-          Go to App
-          </button>
+          <div class="mdl-card__actions-icon">
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+              <i class="fa fa-star"></i>
+              <span class="sr-only">Favorite</span>
+            </button>
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+              <i class="fa fa-pencil-square-o"></i>
+              <span class="sr-only">Edit</span>
+            </button>
+            <button class="p-more btn">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="mdl-card__actions-button">
+            <button class="btn btn-primary btn-xs pull-right">
+            Go to App
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 ">
-      <div class="mdl-card less" tabindex="0">
-        <div class="mdl-card__title">
-          <h3 class="mdl-card__title-text">Longer heading text for the card.... Longer heading text for the card</h3>
-        </div>
-        <div class="main-body">
+      <div class="mdl-card" tabindex="0">
+        <div>
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Longer heading text for the card.... Longer heading text for the card</h3>
+          </div>
           <div class="mdl-card__supporting-text with-footer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br /></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <ul class="list-inline">
               <li><span class="text-bold">Sample</span></li>
               <li>Sample</li>
               <li>Sample</li>
             </ul>
           </div>
-          <div class="toggle-link">show more</div>
+        </div>  
+        <div class="expand-card bold" role="button" tabindex="0">
+          <i class="fa fa-chevron-down fa-fw"></i>
+          &nbsp;More
         </div>
         <div class="mdl-card__actions mdl-card--border">
-          <button class="p-more btn">
-          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-primary btn-xs pull-right">
-          Go to App
-          </button>
+          <div class="mdl-card__actions-icon">
+            <button class="p-more btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="mdl-card__actions-button">
+            <button class="btn btn-primary btn-xs pull-right">
+            Go to App
+            </button>
+          </div>
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 ">
       <div class="mdl-card" tabindex="0">
-        <div class="mdl-card__title">
-          <h3 class="mdl-card__title-text">Heading text for the card</h3>
-        </div>
-        <div class="mdl-card__supporting-text with-footer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
-        </div>
-        <div class="mdl-card__actions mdl-card--border"><button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-star"></i>
-          <span class="sr-only">Favorite</span>
-          </button>
-          <button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-pencil-square-o"></i>
-          <span class="sr-only">Edit</span>
-          </button>
-          <button class="p-more btn">
-          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-primary btn-xs pull-right">
-          Go to App
-          </button>
+        <div>
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Heading text for the card</h3>
+          </div>
+          <div class="mdl-card__supporting-text with-footer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
+          </div>
+        </div>        
+        <div class="mdl-card__actions mdl-card--border">
+          <div  class="mdl-card__actions-icon">
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+              <i class="fa fa-star"></i>
+              <span class="sr-only">Favorite</span>
+            </button>
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+              <i class="fa fa-pencil-square-o"></i>
+              <span class="sr-only">Edit</span>
+            </button>
+            <button class="p-more btn">
+              <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="mdl-card__actions-button">
+            <button class="btn btn-primary btn-xs pull-right">
+              Go to App
+            </button>
+          </div>          
         </div>
       </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 ">
       <div class="mdl-card" tabindex="0">
-        <div class="mdl-card__title">
-          <h3 class="mdl-card__title-text">Heading text for the card</h3>
+        <div>
+          <div class="mdl-card__title">
+            <h3 class="mdl-card__title-text">Heading text for the card</h3>
+          </div>
+          <div class="mdl-card__supporting-text with-footer">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
+            <ul class="list-inline">
+              <li><span class="text-bold">Sample</span></li>
+              <li>Sample</li>
+              <li>Sample</li>
+              <li>Sample</li>
+              <li>Sample</li>
+              <li>Sample</li>
+              <li>Sample</li>
+              <li>sample</li>
+              <li>Sample</li>
+              <li>sample</li>
+              <li>Sample</li>
+              <li>sample</li>
+            </ul>
+          </div>
         </div>
-        <div class="mdl-card__supporting-text with-footer">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.<br /></p>
-          <ul class="list-inline show-list-10items">
-            <li><span class="text-bold">Sample</span></li>
-            <li>Sample</li>
-            <li>Sample</li>
-            <li>Sample</li>
-            <li>Sample</li>
-            <li>Sample</li>
-            <li>Sample</li>
-            <li>sample</li>
-            <li>Sample</li>
-            <li>sample</li>
-            <li>Sample</li>
-            <li>sample</li>
-          </ul>
+        <div class="expand-card bold" role="button" tabindex="0">
+          <i class="fa fa-chevron-down fa-fw"></i>
+          &nbsp;More
         </div>
-        <div class="mdl-card__actions mdl-card--border"><button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-star"></i>
-          <span class="sr-only">Favorite</span>
-          </button>
-          <button type="button" class="btn btn-icon-only btn-xs btn-hover">
-          <i class="fa fa-pencil-square-o"></i>
-          <span class="sr-only">Edit</span>
-          </button>
-          <button class="p-more btn">
-          <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
-          </button>
-          <button class="btn btn-primary btn-xs pull-right">
-          Go to App
-          </button>
+        <div class="mdl-card__actions mdl-card--border">
+          <div class="mdl-card__actions-icon">
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+            <i class="fa fa-star"></i>
+            <span class="sr-only">Favorite</span>
+            </button>
+            <button type="button" class="btn btn-icon-only btn-xs btn-hover">
+            <i class="fa fa-pencil-square-o"></i>
+            <span class="sr-only">Edit</span>
+            </button>
+            <button class="p-more btn">
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div class="mdl-card__actions-button">
+            <button class="btn btn-primary btn-xs pull-right">
+            Go to App
+            </button>
+          </div>
         </div>
       </div>
     </div>

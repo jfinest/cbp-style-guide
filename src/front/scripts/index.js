@@ -125,18 +125,30 @@ $(document).ready(function () {
   var ellipsisText = function(e) {
     //complete text stored in a variable
     var completeText = e.innerHTML.split(' ');
+    console.log('COmpete text');
+    console.log(completeText);
     //wordArray will be the text displayed
     var wordArray = e.innerHTML.split(' ');
+    console.log('wordArray');
+    console.log(wordArray);
     var lineNumMax = e.className.match(/\d/g);
+    console.log('lineNumMax');
+    console.log(lineNumMax);
     var finalHeight = lineNumMax * 18; //18 is the  line height
 
     while (e.scrollHeight > finalHeight) {
       wordArray.pop();
+      console.log(e.scrollHeight);
+      console.log('wordArray');
+      console.log(wordArray);
       e.innerHTML = wordArray.join(' ') + '<span class="ellipsis">... </span>';
+      console.log(e.innerHTML);
     }
 
     //save the additional text in the span
     e.innerHTML = e.innerHTML + ' <span class="additional-text">' + completeText.splice(wordArray.length).join(' ') + '</span>';
+    console.log('completeText.splice(wordArray.length).join(" "');
+    console.log(completeText.splice(wordArray.length).join(' '));
   };
 
   // this should be a function which you will call on load
@@ -148,7 +160,11 @@ $(document).ready(function () {
 
   //add ellipsis to all p using the class
   var addEllipsisSelector = document.querySelectorAll('.text-ellipsis-4line');
+  var addEllipsisSelector2 = document.querySelectorAll('.text-ellipsis-3line');
+  console.log('addEllipsisSelector');
+  console.log(addEllipsisSelector);
   addEllipsis(addEllipsisSelector);
+  addEllipsis(addEllipsisSelector2);
   var removeEllipsisSelector = document.querySelectorAll('.mdl-card-expand');
   //expand the text when this function is called    
   for (var i = 0; i < removeEllipsisSelector.length; i++) {
@@ -186,6 +202,30 @@ $(document).ready(function () {
       $(this).parents('.mdl-card').addClass('brand-card-expand');
     }
   });
+
+  // $('.toggle-link').on('click', function() {
+  //   if ($(this).parents('.mdl-card').hasClass('expanded-card')) {
+  //     $(this).parents('.mdl-card').removeClass('expanded-card').addClass('less');
+  //   } else {
+  //     $('.mdl-card').removeClass('expanded-card');
+  //     $(this).parents('.mdl-card').addClass('expanded-card');
+  //   }
+  // });
+  $('.expand-card').on('click', function() {
+    $(this).text( $(this).text() == "More" ? "Less" : "More" );
+    if ($(this).parents('.mdl-card').hasClass('expanded-card')) {
+      $(this).parents('.mdl-card').removeClass('expanded-card');
+      $(this).parents('.mdl-card').find('.text-ellipsis-3line').removeClass('expanded-view');
+      // $(this).addClass('hidden');
+      // $(this).next().removeClass('hidden');
+    } else {
+      $('.mdl-card').removeClass('expanded-card');
+      $('.text-ellipsis-3line').removeClass('expanded-view');
+      $(this).parents('.mdl-card').addClass('expanded-card');
+      $(this).parents('.mdl-card').find('.text-ellipsis-3line').addClass('expanded-view');
+    }
+  });
+  
 
   
 

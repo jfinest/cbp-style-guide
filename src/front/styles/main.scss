@@ -115,12 +115,12 @@
     box-shadow: none;
     border-radius: 5px;
     border: 3px solid $gray-lightest;
-    height: 200px;
+    height: 225px;
+    justify-content: space-between;
 
     &.mdl-card-border {
       border: 3px solid $gray-lighter;
     }
-
     &:focus,
     &:hover,
     &:focus-within,
@@ -132,45 +132,37 @@
       }
     }
   }
-  .less {
-    .mdl-card__supporting-text {
-		height: 50px;
-		overflow: hidden;		      
-    }
-  }
-  .show-more {
+  .expanded-card {
   	height: auto;
   	.mdl-card__supporting-text {
   		height: auto;
   	}
+    .expand-card {
+      margin-bottom: 9px;
+    }
   	.mdl-card__actions {
   		position: static;
   	}
+    .list-inline {
+      display: block;
+    }
   }
   .mdl-card__actions {
     height: 56px;
-    position: absolute;
-    bottom: 0;
+    display: flex;
+    justify-content: space-between;
   }
-
-  /*.mdl-card__supporting-text {
-    &.with-footer {
-      padding-bottom: 56px;
-    }
-  }*/
-  .main-body {
-  	display: flex;
-  	flex-direction: column;
+  .list-inline {
+    display: none;
   }
-  .toggle-link {
-  	text-align: center;
-  	margin-top: 9px;
-  	margin-bottom: 9px;
-  	&:focus,
+  .expand-card {
+    padding-left: 16px;
+    width: fit-content;
   	&:hover,
+    &:focus,
   	&:active {
-  		text-decoration: underline;
   		color: $brand-info;
+      outline: none;
   	}
   }
 }
@@ -184,24 +176,18 @@
   }
 
   .mdl-card__actions {
-    height: 56px;
+    height: 50px;
     position: absolute;
     bottom: 0;
   }
 
   .mdl-card__supporting-text {
-    /*&.with-footer {
+    &.with-footer {
       padding-bottom: 56px;
-    }*/
+    }
   }
 }
 
-/*.more {
-	.mdl-card__supporting-text {
-	  	height: 50px;
-	  	overflow: hidden;
-	}
-}*/
 
 .mdl-card {
   @extend .mdl-card;
@@ -250,8 +236,5 @@
   &:focus-within,
   &:active {
     background-color: $white;
-    /*.mdl-card--border {
-      border-top: 3px solid $brand-info;
-    }*/
   }
 }
