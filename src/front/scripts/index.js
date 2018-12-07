@@ -211,17 +211,25 @@ $(document).ready(function () {
   //     $(this).parents('.mdl-card').addClass('expanded-card');
   //   }
   // });
-  $('.expand-card').on('click', function() {
-    $(this).text( $(this).text() == "More" ? "Less" : "More" );
+  $('.expand-card, .collapse-card').on('click', function() {
+    // $(this).text( $(this).text() === 'More' ? 'Less' : 'More' );
+    // $(this).children().css('transform', 'rotate(180deg)');
     if ($(this).parents('.mdl-card').hasClass('expanded-card')) {
       $(this).parents('.mdl-card').removeClass('expanded-card');
       $(this).parents('.mdl-card').find('.text-ellipsis-3line').removeClass('expanded-view');
       // $(this).addClass('hidden');
       // $(this).next().removeClass('hidden');
+
     } else {
       $('.mdl-card').removeClass('expanded-card');
+
+      // $('.expand-card').removeClass('hidden');
+      // $('collapse-card').addClass('hidden');
       $('.text-ellipsis-3line').removeClass('expanded-view');
+      // $('expand-card').text($(this).text() === 'More' ? 'Less' : 'More' );
+      // $('expand-card').children().css('transform', 'rotate(180deg)');
       $(this).parents('.mdl-card').addClass('expanded-card');
+      // $(this).removeClass('hidden');
       $(this).parents('.mdl-card').find('.text-ellipsis-3line').addClass('expanded-view');
     }
   });

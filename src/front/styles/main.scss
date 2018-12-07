@@ -10,9 +10,10 @@
   background-color: inherit;
   .btn {
     background-color: transparent;
-    border: 2px solid $gray-medium;
+    border: 2px solid $gray;
     border-radius: 3px;
     color: $gray;
+    font-weight: 500;
 
     + .btn {
       margin-left: 5px;
@@ -92,81 +93,69 @@
 
 /* CBP Extensions */
 
-.mdl-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  >div[class*='col-'] {
-    margin-bottom: 25px;
-  }
-}
+.mdl-card {
+  @extend .mdl-card;
+  background-color:  $gray-lightest;
+  box-shadow: none;
+  border-radius: 5px;
+  border: 3px solid $gray-lighter;
 
-.mdl-card-single-expansion {
-  display: flex;
-  flex-wrap: wrap;
-
-  >div[class*='col-'] {
-    display: block;
-    margin-bottom: 25px;
+  &.mdl-card-border {
+    border: 3px solid $gray-lighter;
   }
 
-  .mdl-card {
-    @extend .mdl-card;
-    background-color:  $gray-lightest;
-    box-shadow: none;
-    border-radius: 5px;
-    border: 3px solid $gray-lightest;
-    height: 225px;
-    justify-content: space-between;
-
-    &.mdl-card-border {
-      border: 3px solid $gray-lighter;
-    }
+  &.mdl-card-expand {
     &:focus,
     &:hover,
-    &:focus-within,
     &:active {
       box-shadow: 0 0 4px 1px lighten(#000, 25%);
       border: 3px solid $brand-info;
-      .mdl-card--border {
-        border-top: 3px solid $brand-info;
+      &.mdl-card-border {
+        border: 3px solid $brand-info;
       }
     }
   }
-  .expanded-card {
-  	height: auto;
-  	.mdl-card__supporting-text {
-  		height: auto;
-  	}
-    .expand-card {
-      margin-bottom: 9px;
-    }
-  	.mdl-card__actions {
-  		position: static;
-  	}
-    .list-inline {
-      display: block;
+  &:focus,
+  &:hover,
+  &:active {
+    box-shadow: 0 0 4px 1px lighten(#000, 25%);
+    border: 3px solid $brand-info;
+    .mdl-card--border {
+      border-top: 3px solid $brand-info;
     }
   }
-  .mdl-card__actions {
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .list-inline {
-    display: none;
-  }
-  .expand-card {
-    padding-left: 16px;
-    width: fit-content;
-  	&:hover,
-    &:focus,
-  	&:active {
-  		color: $brand-info;
-      outline: none;
-  	}
+  &:focus-within {
+    box-shadow: 0 0 4px 1px lighten(#000, 25%);
+    border: 3px solid $brand-info;
+    .mdl-card--border {
+      border-top: 3px solid $brand-info;
+    }
   }
 }
 
+.mdl-card__actions {
+  @extend .mdl-card__actions;
+  &.mdl-card--border {
+    border-top: 3px solid $gray-lighter;
+  }
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $white;
+  }
+  &:focus-within {
+   background-color: $white; 
+  }
+}
+
+/* Height of cards are set by content */
+.mdl-card-container {
+  >div[class*='col-'] {
+    margin-bottom: 25px;
+  }
+}
+
+/* Equal Heights cards */
 .mdl-card-deck {
   display: flex;
   flex-wrap: wrap;
@@ -188,53 +177,87 @@
   }
 }
 
+/* Cards have equal Heights but expands individually */
+.mdl-card-single-expansion {
+  display: flex;
+  flex-wrap: wrap;
 
-.mdl-card {
-  @extend .mdl-card;
-  /*background-color: $white;*/
-  background-color:  $gray-lightest;
-  box-shadow: none;
-  border-radius: 5px;
-  border: 3px solid $gray-lightest;
-
-
- /* &.mdl-card-shadow {
-    @include shadow-4dp();
-  }*/
-
-  &.mdl-card-border {
-    border: 3px solid $gray-lighter;
+  >div[class*='col-'] {
+    margin-bottom: 25px;
   }
 
-  &.mdl-card-expand {
-    &:focus,
+  .mdl-card {
+    @extend .mdl-card;
+   /* background-color:  $gray-lightest;
+    box-shadow: none;
+    border-radius: 5px;
+    border: 3px solid $gray-lightest;*/
+    height: 225px;
+    justify-content: space-between;
+
+    /*&.mdl-card-border {
+      border: 3px solid $gray-lighter;
+    }*/
+    /*&:focus,
     &:hover,
+    &:focus-within,
     &:active {
       box-shadow: 0 0 4px 1px lighten(#000, 25%);
       border: 3px solid $brand-info;
-      &.mdl-card-border {
-        border: 3px solid $brand-info;
+      .mdl-card--border {
+        border-top: 3px solid $brand-info;
       }
+    }*/
+  }
+  .expanded-card {
+  	height: auto;
+  	.mdl-card__supporting-text {
+  		height: auto;
+  	}
+    .expand-card {
+      margin-bottom: 9px;
+    }
+  	.mdl-card__actions {
+  		position: static;
+  	}
+    .list-inline {
+      display: block;
+    }
+    .collapse-card {
+      display: block;
+      margin-bottom: 9px;
+    }
+    .expand-card {
+      display: none;
     }
   }
-  &:focus,
-  &:hover,
-  &:focus-within,
-  &:active {
-    box-shadow: 0 0 4px 1px lighten(#000, 25%);
-    border: 3px solid $brand-info;
-    .mdl-card--border {
-      border-top: 3px solid $brand-info;
+  .mdl-card__actions {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-inline {
+    display: none;
+  }
+  .collapse-card {
+    display: none;
+    padding-left: 16px;
+    width: fit-content;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-info;
+      outline: none;
     }
   }
-}
-
-.mdl-card__actions {
-  @extend .mdl-card__actions;
-  &:focus,
-  &:hover,
-  &:focus-within,
-  &:active {
-    background-color: $white;
+  .expand-card {
+    padding-left: 16px;
+    width: fit-content;
+  	&:hover,
+    &:focus,
+  	&:active {
+  		color: $brand-info;
+      outline: none;
+  	}
   }
 }
