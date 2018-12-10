@@ -972,7 +972,7 @@ TODO
         <div class="mdl-card__title">
           <h3 class="mdl-card__title-text">Heading for the card</h3>
         </div>
-        <div class="mdl-card__supporting-text with-footer">
+        <div class="mdl-card__supporting-text">
           <p class="text-ellipsis-3line">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>             
         <div class="expand-card bold" role="button" tabindex="0">
@@ -998,7 +998,7 @@ TODO
         <div class="mdl-card__title">
           <h3 class="mdl-card__title-text">Longer heading text for the card.... Longer heading text for the card</h3>
         </div>
-        <div class="mdl-card__supporting-text with-footer">
+        <div class="mdl-card__supporting-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <ul class="list-inline">
             <li><span class="text-bold">Sample</span></li>
@@ -1029,7 +1029,7 @@ TODO
         <div class="mdl-card__title">
           <h3 class="mdl-card__title-text">Heading text for the card</h3>
         </div>
-        <div class="mdl-card__supporting-text with-footer">
+        <div class="mdl-card__supporting-text">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
         </div>           
         <div class="mdl-card__actions mdl-card--border">
@@ -1044,27 +1044,25 @@ TODO
     </div>
     <div class="col-xs-12 col-sm-6 col-md-3 ">
       <div class="mdl-card" tabindex="0">
-        <div class="title-content">
-          <div class="mdl-card__title">
-            <h3 class="mdl-card__title-text">Heading text for the card</h3>
-          </div>
-          <div class="mdl-card__supporting-text with-footer">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
-            <ul class="list-inline">
-              <li><span class="text-bold">Sample</span></li>
-              <li>Sample</li>
-              <li>Sample</li>
-              <li>Sample</li>
-              <li>Sample</li>
-              <li>Sample</li>
-              <li>Sample</li>
-              <li>sample</li>
-              <li>Sample</li>
-              <li>sample</li>
-              <li>Sample</li>
-              <li>sample</li>
-            </ul>
-          </div>
+        <div class="mdl-card__title">
+          <h3 class="mdl-card__title-text">Heading text for the card</h3>
+        </div>
+        <div class="mdl-card__supporting-text">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua.</p>
+          <ul class="list-inline">
+            <li><span class="text-bold">Sample</span></li>
+            <li>Sample</li>
+            <li>Sample</li>
+            <li>Sample</li>
+            <li>Sample</li>
+            <li>Sample</li>
+            <li>Sample</li>
+            <li>sample</li>
+            <li>Sample</li>
+            <li>sample</li>
+            <li>Sample</li>
+            <li>sample</li>
+          </ul>
         </div>
         <div class="expand-card bold" role="button" tabindex="0">
           <i class="fa fa-chevron-down fa-fw"></i>

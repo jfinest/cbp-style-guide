@@ -188,26 +188,54 @@
 
   .mdl-card {
     @extend .mdl-card;
-   /* background-color:  $gray-lightest;
-    box-shadow: none;
-    border-radius: 5px;
-    border: 3px solid $gray-lightest;*/
     height: 225px;
-    justify-content: space-between;
+  }
+  .mdl-card__title {
+    height: 70px;
+  }
 
-    /*&.mdl-card-border {
-      border: 3px solid $gray-lighter;
-    }*/
-    /*&:focus,
+  .mdl-card__title-text {
+    align-self: center;
+  }
+
+  .mdl-card__supporting-text {
+    flex-grow: 1;
+    padding-bottom: 0;
+  }
+
+  .mdl-card__actions {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-inline {
+    display: none;
+  }
+
+  .collapse-card {
+    display: none;
+    padding-left: 16px;
+    margin-bottom: 9px;
+    width: fit-content;
     &:hover,
-    &:focus-within,
+    &:focus,
     &:active {
-      box-shadow: 0 0 4px 1px lighten(#000, 25%);
-      border: 3px solid $brand-info;
-      .mdl-card--border {
-        border-top: 3px solid $brand-info;
-      }
-    }*/
+      color: $brand-info;
+      outline: none;
+    }
+  }
+
+  .expand-card {
+    padding-left: 16px;
+    margin: 9px 0;
+    width: fit-content;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-info;
+      outline: none;
+    }
   }
   .expanded-card {
   	height: auto;
@@ -230,34 +258,5 @@
     .expand-card {
       display: none;
     }
-  }
-  .mdl-card__actions {
-    height: 56px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .list-inline {
-    display: none;
-  }
-  .collapse-card {
-    display: none;
-    padding-left: 16px;
-    width: fit-content;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $brand-info;
-      outline: none;
-    }
-  }
-  .expand-card {
-    padding-left: 16px;
-    width: fit-content;
-  	&:hover,
-    &:focus,
-  	&:active {
-  		color: $brand-info;
-      outline: none;
-  	}
   }
 }
